@@ -5,7 +5,7 @@ import { RiArrowDownSLine, RiCloseLine, RiMenu3Line } from "react-icons/ri";
 
 
 const MoibleNavbar = () => {
-  const [slide , setslide] = useState(true)
+  const [slide , setslide] = useState(false)
   return (
     <div className="sm:hidden block">
       <div>
