@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="bg-orange-500 relative">
         <ContainerBox>
           <div className="flex text-[9px] justify-between sm:text-[13px] text-white py-1">
-            <p>+91 889 2345 890</p>
+            <p>+91 98217 04359</p>
             <p>enquiry@caneeravshah.com</p>
           </div>
         </ContainerBox>

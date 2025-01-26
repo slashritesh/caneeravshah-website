@@ -4,6 +4,18 @@ import { service } from "@/types/commanTypes";
 import PortableText from "react-portable-text";
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+
+export async function generateMetadata({ params }: { params: { serviceSlug: string } }) : Promise<Metadata> {
+  const data = await getdata(params.serviceSlug) as singleService
+  return {
+    title : data.title,
+    description : data.description
+  }
+}
+
+
 
 type singleService = {
   body: any;
@@ -21,7 +33,7 @@ const getdata = (slug: string) => {
   return data;
 };
 
-const page = async ({ params }: { params: { serviceSlug: string } }) => {
+const SingleServicesPage = async ({ params }: { params: { serviceSlug: string } }) => {
   const data = (await getdata(params.serviceSlug)) as singleService;
 
   const components = {
@@ -50,7 +62,12 @@ const page = async ({ params }: { params: { serviceSlug: string } }) => {
             <div className="p-8 h-auto bg-orange-100 rounded-lg">
               <h3 className="font-semibold text-2xl mb-5">{data.title}</h3>
               <p className="mb-10">{data.description}</p>
-              <Link className="px-5 p-2 bg-orange-500 text-white rounded-md" href={"https://cal.com/caneeravshah/ca-services"}>Book Call Now</Link>
+              <Link
+                className="px-5 p-2 bg-orange-500 text-white rounded-md"
+                href={"https://cal.com/caneeravshah/ca-services"}
+              >
+                Book Call Now
+              </Link>
             </div>
             <div className="my-8 p-8 bg-slate-100 rounded-lg">
               <h3 className="text-lg font-semibold">Related Guides</h3>
@@ -62,4 +79,5 @@ const page = async ({ params }: { params: { serviceSlug: string } }) => {
   );
 };
 
-export default page;
+
+export default SingleServicesPage

@@ -4,8 +4,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="mt-20">
-      <div className="sm:p-10  p-8 bg-orange-100 rounded-xl">
+    <div className="mt-10">
+      <div className="sm:p-10  mb-10 p-8 bg-orange-100 rounded-xl">
         <div>
           <h1 className="sm:text-3xl  text-xl leading-tight mb-3  capitalize font-semibold">
             Grow your business with <br className="hidden sm:inline" /> clear <span className="text-orange-500">financial records</span>.

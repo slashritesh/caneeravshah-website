@@ -15,7 +15,7 @@ const getdata = ()=>{
 
 const ServicesPage = async() => {
   const Services = await getdata()
-  // console.log(Services);
+ 
   
   return (
     <ContainerBox>
