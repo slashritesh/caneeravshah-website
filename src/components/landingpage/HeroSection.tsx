@@ -45,7 +45,7 @@ const HeroSection = () => {
           />
         </div> */}
 
-        <div className="relative sm:w-full border sm:px-16 sm:my-20 h-[340px] sm:h-[500px]">
+        <div className="relative -z-10 sm:w-full border sm:px-16 sm:my-20 h-[340px] sm:h-[500px]">
           <Image
             alt="Small business owners"
             src="/small-bussiness-owners.png"
